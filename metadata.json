@@ -1,0 +1,6 @@
+{
+  "name": "Paila Nepal Wellness Centre",
+  "description": "Healthy Mind • Prepared Community • Resilient Nepal. Mental health, psychosocial support, counselling training, and disaster resilience in Nepal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
