@@ -34,8 +34,8 @@ COURSE PROSPECTUS & SYLLABUS OVERVIEW
 ================================================================================
 Program Title: 6-Month Psychosocial Counselling Training
 Curriculum Basis: Based on the CTEVT Psychosocial Counselor Curriculum
-Duration: 6 Months | Total: 780 Hours | Field Practice: 160 Hours OJT
-Learning Model: Theory + Practical + Supervised On-the-Job Training
+Duration: 6 Months | Total: 780 Hours | Field Practice: Supervised Practicum
+Learning Model: Theory + Practical + Supervised Field Practicum
 
 ORGANIZATION CONTACT & LOCATION:
 Location: KC Bhawan, Nearby Lama Petrol Pump, Jorpati, Kathmandu, Nepal
@@ -50,7 +50,7 @@ ${featuredTraining.curriculumTopics.map((t, idx) => `  Module 0${idx + 1}: ${t.t
 
 EVALUATION CRITERIA:
 - Formative Assessment & Internal Practical Demonstration: 40%
-- Supervised Field Placement & OJT Evaluation: 20%
+- Supervised Field Placement & Practicum Evaluation: 20%
 - Comprehensive Summative Written & Viva Examination: 40%
 - Mandatory Attendance Requirement: Minimum 80%
 
@@ -176,7 +176,7 @@ Eligibility and admission requirements may be subject to applicable institutiona
             </div>
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
               <span className="text-[10px] text-slate-500 uppercase font-bold block">Field Practice</span>
-              <span className="text-base sm:text-lg font-black text-[#008C4A]">160 Hours OJT</span>
+              <span className="text-base sm:text-lg font-black text-[#008C4A]">Supervised Practicum</span>
               <span className="text-[10px] text-slate-500 block">Supervised Fieldwork</span>
             </div>
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
@@ -250,9 +250,9 @@ Eligibility and admission requirements may be subject to applicable institutiona
                 </p>
               </div>
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                <span className="font-bold text-slate-900 block">Supervised OJT (20%)</span>
+                <span className="font-bold text-slate-900 block">Supervised Practicum (20%)</span>
                 <p className="text-[11px] text-slate-600">
-                  160 hours field placement in partner schools, health posts, or community centers evaluated by on-site mentors.
+                  Field placement in partner schools, health posts, or community centers evaluated by on-site mentors.
                 </p>
               </div>
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">

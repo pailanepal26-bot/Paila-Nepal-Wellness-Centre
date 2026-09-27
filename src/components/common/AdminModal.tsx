@@ -19,7 +19,7 @@ import {
   Edit2
 } from 'lucide-react';
 import { useAdmin } from '../../context/AdminContext';
-import { AdminSettings, PailaEvent, LeadershipMember } from '../../types';
+import { AdminSettings, PailaEvent, LeadershipMember, BlogPost } from '../../types';
 
 export const AdminModal: React.FC = () => {
   const {
@@ -33,6 +33,12 @@ export const AdminModal: React.FC = () => {
     addEvent,
     updateEvent,
     deleteEvent,
+    posts,
+    addPost,
+    updatePost,
+    deletePost,
+    subscribers,
+    deleteSubscriber,
     leadership,
     updateLeadershipMember,
     resetAll,
@@ -42,10 +48,31 @@ export const AdminModal: React.FC = () => {
     closeAdminModal,
   } = useAdmin();
 
-  const [activeTab, setActiveTab] = useState<'announcement' | 'training' | 'events' | 'leadership' | 'contact' | 'faqs' | 'preview' | 'backup'>('announcement');
+  const [activeTab, setActiveTab] = useState<'announcement' | 'training' | 'events' | 'blog' | 'newsletter' | 'leadership' | 'contact' | 'faqs' | 'preview' | 'backup'>('announcement');
   const [localSettings, setLocalSettings] = useState<AdminSettings>(settings);
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [importStatus, setImportStatus] = useState<string | null>(null);
+
+  // New Blog Post Form State
+  const [newPost, setNewPost] = useState<Omit<BlogPost, 'id'>>({
+    slug: '',
+    title: '',
+    titleNe: '',
+    summary: '',
+    summaryNe: '',
+    content: [''],
+    contentNe: [''],
+    author: 'Sunil Lama',
+    authorRole: 'Founder & Psychologist',
+    authorRoleNe: 'संस्थापक तथा मनोविद्',
+    date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+    dateNe: '२०८२',
+    readTime: '5 min read',
+    category: 'Mental Health',
+    categoryNe: 'मानसिक स्वास्थ्य',
+    tags: ['Mental Health', 'Community Resilience'],
+    featured: false
+  });
 
   // New Event Form State
   const [newEvent, setNewEvent] = useState<Omit<PailaEvent, 'id'>>({
@@ -161,6 +188,28 @@ export const AdminModal: React.FC = () => {
           >
             <Calendar className="w-3.5 h-3.5" />
             <span>Events & Workshops ({events.length})</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('blog')}
+            className={`py-3 px-4 flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
+              activeTab === 'blog'
+                ? 'bg-white text-[#1457A6] border-b-2 border-[#1457A6]'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <BookOpen className="w-3.5 h-3.5" />
+            <span>Blog Articles ({posts.length})</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('newsletter')}
+            className={`py-3 px-4 flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
+              activeTab === 'newsletter'
+                ? 'bg-white text-[#1457A6] border-b-2 border-[#1457A6]'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Bell className="w-3.5 h-3.5" />
+            <span>Subscribers ({subscribers.length})</span>
           </button>
           <button
             onClick={() => setActiveTab('leadership')}

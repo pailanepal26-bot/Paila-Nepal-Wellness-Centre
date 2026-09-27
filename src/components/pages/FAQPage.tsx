@@ -46,8 +46,8 @@ export const FAQPage: React.FC<FAQPageProps> = ({ onOpenSupportModal, onNavigate
         </h1>
         <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
           {isNepali
-            ? "हाम्रा सेवाहरू, ६-महिने मनोसामाजिक परामर्श तालिम, OJT, स्वयंसेवा र साझेदारी सम्बन्धी सम्पूर्ण जानकारी।"
-            : "Clear, transparent answers about our psychosocial counselling scope, 6-month training curriculum, OJT hours, partnership protocols, and community resilience."}
+            ? "हाम्रा सेवाहरू, ६-महिने मनोसामाजिक परामर्श तालिम, प्रयोगात्मक अभ्यास, स्वयंसेवा र साझेदारी सम्बन्धी सम्पूर्ण जानकारी।"
+            : "Clear, transparent answers about our psychosocial counselling scope, 6-month training curriculum, field practicum, partnership protocols, and community resilience."}
         </p>
 
         {/* Search */}

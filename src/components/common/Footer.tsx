@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, ExternalLink, ShieldCheck, Heart, Lock, ArrowUp } from 'lucide-react';
 import { Logo } from './Logo';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage, SUPPORTED_LANGUAGES } from '../../context/LanguageContext';
 import { useAdmin } from '../../context/AdminContext';
 
 interface FooterProps {
@@ -10,7 +10,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavClick, onOpenLegalModal }) => {
-  const { t, isNepali } = useLanguage();
+  const { t, language, setLanguage, isNepali } = useLanguage();
   const { settings, openAdminModal } = useAdmin();
 
   const scrollToTop = () => {
@@ -198,6 +198,28 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick, onOpenLegalModal }) 
               >
                 <Facebook className="w-5 h-5" />
               </a>
+            </div>
+
+            <div className="pt-4 border-t border-slate-700 space-y-2">
+              <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
+                Language / भाषा
+              </h4>
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {SUPPORTED_LANGUAGES.map((l) => (
+                  <button
+                    key={l.code}
+                    onClick={() => setLanguage(l.code)}
+                    className={`px-2 py-1 rounded text-xs transition-colors flex items-center gap-1 cursor-pointer ${
+                      language === l.code
+                        ? 'bg-[#008C4A] text-white font-bold'
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                    }`}
+                  >
+                    <span>{l.flag}</span>
+                    <span>{l.nativeName}</span>
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="pt-4 border-t border-slate-700 space-y-2">

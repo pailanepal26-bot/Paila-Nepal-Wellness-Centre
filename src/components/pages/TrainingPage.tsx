@@ -41,7 +41,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({ onOpenTrainingModal,
         </p>
         <p className="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
           {isNepali
-            ? "मनोसामाजिक सहयोग, परामर्श सीप र सामुदायिक सहजीकरणमा सैद्धान्तिक, प्रयोगात्मक र कार्यस्थल अभ्यास (OJT) सहितको गहन व्यावसायिक तालिम।"
+            ? "मनोसामाजिक सहयोग, परामर्श सीप र सामुदायिक सहजीकरणमा सैद्धान्तिक र प्रयोगात्मक कार्यस्थल अभ्यास सहितको गहन व्यावसायिक तालिम।"
             : "A structured, competency-based course designed to equip aspiring counselors, social workers, and educators with rigorous helping skills and ethical practice."}
         </p>
 
@@ -82,13 +82,13 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({ onOpenTrainingModal,
           <div className="p-6 bg-white rounded-2xl border border-slate-200 text-center shadow-xs">
             <Award className="w-6 h-6 text-amber-600 mx-auto mb-2" />
             <span className="text-xs text-slate-500 uppercase tracking-wider block">Field Practice</span>
-            <span className="text-xl sm:text-2xl font-black text-amber-600">160 Hrs OJT</span>
+            <span className="text-xl sm:text-2xl font-black text-amber-600">Field Practicum</span>
           </div>
 
           <div className="p-6 bg-white rounded-2xl border border-slate-200 text-center shadow-xs">
             <Briefcase className="w-6 h-6 text-indigo-600 mx-auto mb-2" />
             <span className="text-xs text-slate-500 uppercase tracking-wider block">Learning Model</span>
-            <span className="text-xs sm:text-sm font-black text-indigo-700 block mt-1">Theory+Prac+OJT</span>
+            <span className="text-xs sm:text-sm font-black text-indigo-700 block mt-1">Theory + Practical</span>
           </div>
         </div>
       </section>

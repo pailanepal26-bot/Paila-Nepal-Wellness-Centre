@@ -1,4 +1,4 @@
-import { LeadershipMember, ServiceItem, ProgramItem, TrainingCourse, ResourceItem, FAQItem, AdminSettings, PailaEvent } from '../types';
+import { LeadershipMember, ServiceItem, ProgramItem, TrainingCourse, ResourceItem, FAQItem, AdminSettings, PailaEvent, BlogPost, NewsletterSubscriber } from '../types';
 
 export const initialLeadership: LeadershipMember[] = [
   {
@@ -504,9 +504,9 @@ export const featuredTraining: TrainingCourse = {
   subtitleNe: 'सीटीईभीटी (CTEVT) मनोसामाजिक परामर्शदाता पाठ्यक्रममा आधारित',
   duration: '6 Months',
   totalHours: '780 Hours',
-  ojtHours: '160 Hours OJT (On-the-Job Training)',
-  learningModel: 'Theory + Practical + On-the-Job Training',
-  learningModelNe: 'सैद्धान्तिक + प्रयोगात्मक + कार्यस्थल अभ्यास (OJT)',
+  fieldPracticum: 'Supervised Field Practicum',
+  learningModel: 'Theory + Practical + Field Practicum',
+  learningModelNe: 'सैद्धान्तिक + प्रयोगात्मक + कार्यस्थल अभ्यास',
   curriculumTopics: [
     {
       title: 'Psychosocial Wellbeing & Intervention',
@@ -599,9 +599,9 @@ export const featuredTraining: TrainingCourse = {
       descriptionNe: 'व्यावसायिक सुपरभिजन, आत्म-हेरचाह (Self-Care), र निरन्तर सिकाइ अभ्यास।'
     },
     {
-      title: 'Practical & Field Learning (160 Hours OJT)',
-      titleNe: 'प्रयोगात्मक तथा कार्यस्थल अभ्यास (१६० घण्टा OJT)',
-      description: 'Supervised on-the-job training in real-world supportive settings applying taught principles.',
+      title: 'Practical & Field Learning',
+      titleNe: 'प्रयोगात्मक तथा कार्यस्थल अभ्यास',
+      description: 'Supervised practical learning in real-world supportive settings applying taught principles.',
       descriptionNe: 'सुपरभाइजरको प्रत्यक्ष निगरानीमा वास्तविक कार्यस्थलमा प्रयोगात्मक अभ्यास।'
     }
   ],
@@ -867,8 +867,8 @@ export const initialFAQs: FAQItem[] = [
     category: 'Training',
     question: 'What is the six-month Psychosocial Counselling Training?',
     questionNe: '६-महिने मनोसामाजिक परामर्श तालिम के हो?',
-    answer: 'It is an in-depth, structured 780-hour professional development course based on the CTEVT Psychosocial Counselor curriculum. It integrates theoretical understanding, extensive practical roleplays, and 160 hours of supervised On-the-Job Training (OJT). It develops foundational competence in active listening, counselling approaches, ethics, case documentation, and community interventions.',
-    answerNe: 'यो सीटीईभीटी (CTEVT) मनोसामाजिक परामर्शदाता पाठ्यक्रममा आधारित ७८० घण्टे गहन तालिम हो। यसमा सैद्धान्तिक ज्ञान, प्रयोगात्मक अभ्यास र १६० घण्टाको कार्यस्थल अभ्यास (OJT) समावेश छ।'
+    answer: 'It is an in-depth, structured 780-hour professional development course based on the CTEVT Psychosocial Counselor curriculum. It integrates theoretical understanding, extensive practical roleplays, and supervised field practice. It develops foundational competence in active listening, counselling approaches, ethics, case documentation, and community interventions.',
+    answerNe: 'यो सीटीईभीटी (CTEVT) मनोसामाजिक परामर्शदाता पाठ्यक्रममा आधारित ७८० घण्टे गहन तालिम हो। यसमा सैद्धान्तिक ज्ञान, प्रयोगात्मक अभ्यास र कार्यस्थल अभ्यास समावेश छ।'
   },
   {
     id: 'faq-6',
@@ -883,16 +883,16 @@ export const initialFAQs: FAQItem[] = [
     category: 'Training',
     question: 'How many hours is the training?',
     questionNe: 'यो तालिम कति घण्टाको हुन्छ?',
-    answer: 'The training comprises a total of 780 Hours spread over a 6-month period, incorporating interactive classroom theory, experiential counselling laboratories, and dedicated fieldwork/OJT.',
+    answer: 'The training comprises a total of 780 Hours spread over a 6-month period, incorporating interactive classroom theory, experiential counselling laboratories, and dedicated practical fieldwork.',
     answerNe: 'यो तालिम ६ महिनाको अवधिमा कुल ७८० घण्टाको हुन्छ, जसमा कक्षाकोठाको सिकाइ, अभ्यास सत्र र कार्यस्थल तालिम समावेश छन्।'
   },
   {
     id: 'faq-8',
     category: 'Training',
-    question: 'What is OJT (On-the-Job Training)?',
-    questionNe: 'OJT (कार्यस्थल अभ्यास) भनेको के हो?',
-    answer: 'OJT stands for On-the-Job Training. In this program, trainees complete 160 hours of hands-on supervised practice in real community settings, schools, or supportive environments, under the mentorship of senior professionals to bridge classroom theory with real-life skills.',
-    answerNe: 'OJT भनेको On-the-Job Training अर्थात् कार्यस्थलमा गरिने प्रयोगात्मक अभ्यास हो। यस तालिममा १६० घण्टा वास्तविक समुदाय, विद्यालय वा सहयोग केन्द्रहरूमा वरिष्ठ सुपरभाइजरको रेखदेखमा अभ्यास गरिन्छ।'
+    question: 'What is Practical Field Learning?',
+    questionNe: 'प्रयोगात्मक तथा कार्यस्थल अभ्यास भनेको के हो?',
+    answer: 'In this program, trainees complete hands-on supervised practice in real community settings, schools, or supportive environments, under the mentorship of senior professionals to bridge classroom theory with real-life helping skills.',
+    answerNe: 'यस तालिममा वास्तविक समुदाय, विद्यालय वा सहयोग केन्द्रहरूमा वरिष्ठ सुपरभाइजरको रेखदेखमा प्रयोगात्मक अभ्यास गरिन्छ, जसले सैद्धान्तिक ज्ञानलाई वास्तविक जीवनोपयोगी सीपसँग जोड्दछ।'
   },
   {
     id: 'faq-9',
@@ -922,8 +922,8 @@ export const initialFAQs: FAQItem[] = [
 
 export const initialAdminSettings: AdminSettings = {
   announcementActive: true,
-  announcementTextEn: 'Admissions Open: 6-Month Psychosocial Counselling Training (780 Hours / 160 Hours OJT). Contact us for registration and session dates.',
-  announcementTextNe: 'नयाँ भर्ना खुल्यो: ६-महिने मनोसामाजिक परामर्श तालिम (७८० घण्टा / १६० घण्टा OJT)। थप जानकारीका लागि सम्पर्क गर्नुहोस्।',
+  announcementTextEn: 'Admissions Open: 6-Month Psychosocial Counselling Training (780 Hours). Contact us for registration and session dates.',
+  announcementTextNe: 'नयाँ भर्ना खुल्यो: ६-महिने मनोसामाजिक परामर्श तालिम (७८० घण्टा)। थप जानकारीका लागि सम्पर्क गर्नुहोस्।',
   nextTrainingBatchEn: 'Upcoming Batch: Open for Application',
   nextTrainingBatchNe: 'आगामी समूह: आवेदन खुला छ',
   trainingFeeNoteEn: 'Scholarship and installment arrangements available upon inquiry.',
@@ -1018,8 +1018,8 @@ export const initialEvents: PailaEvent[] = [
     timeNe: 'दिउँसो २:०० – ४:३० बजे',
     location: 'Hybrid: Paila Nepal Wellness Centre / Online Zoom',
     locationNe: 'हाइब्रिड: पाइला नेपाल हल / अनलाइन जुम (Zoom)',
-    description: 'Comprehensive orientation on the 780-hour CTEVT-aligned syllabus, 160 hours OJT fieldwork arrangements, eligibility criteria (+2 graduates/students), and ethical foundations. Meet faculty members Sunil Lama and Sharada Sunuwar.',
-    descriptionNe: '७८० घण्टे तालिमको १६ वटा मोड्युल, १६० घण्टाको OJT कार्यस्थल अभ्यास, भर्ना प्रक्रिया र योग्यता मापदण्ड बारे विस्तृत जानकारी तथा संकाय सदस्यहरूसँग प्रत्यक्ष साक्षात्कार।',
+    description: 'Comprehensive orientation on the 780-hour CTEVT-aligned syllabus, supervised fieldwork arrangements, eligibility criteria (+2 graduates/students), and ethical foundations. Meet faculty members Sunil Lama and Sharada Sunuwar.',
+    descriptionNe: '७८० घण्टे तालिमको १६ वटा मोड्युल, प्रयोगात्मक कार्यस्थल अभ्यास, भर्ना प्रक्रिया र योग्यता मापदण्ड बारे विस्तृत जानकारी तथा संकाय सदस्यहरूसँग प्रत्यक्ष साक्षात्कार।',
     status: 'upcoming',
     registrationOpen: true,
     capacity: '50 Seats (In-Person + Online)',
@@ -1051,5 +1051,205 @@ export const initialEvents: PailaEvent[] = [
     feeNoteNe: 'अग्रपंक्ति कार्यकर्ताहरूका लागि निःशुल्क',
     audience: 'Health workers, field coordinators, NGO volunteers',
     audienceNe: 'स्वास्थ्यकर्मी, फिल्ड कार्यकर्ता, सामाजिक संस्थाका स्वयंसेवक'
+  }
+];
+
+export const initialBlogPosts: BlogPost[] = [
+  {
+    id: 'post-1',
+    slug: 'demystifying-mental-health-nepal-breaking-stigma',
+    title: 'Demystifying Mental Health in Nepal: Moving from Silence to Community Empathy',
+    titleNe: 'नेपालमा मानसिक स्वास्थ्यको यथार्थ: मौनता चिरेर सामुदायिक सहानुभूति तर्फ',
+    summary: 'Why acknowledging emotional distress as a normal human experience is the first step toward collective wellbeing and destigmatization across Nepali families.',
+    summaryNe: 'नेपाली समाजमा मानसिक स्वास्थ्यलाई कलंकको रूपमा नभई सामान्य मानवीय संवेदनशीलताको रूपमा बुझ्न किन आवश्यक छ? एक विश्लेषणात्मक आलेख।',
+    author: 'Sunil Lama',
+    authorRole: 'Founder & Psychologist',
+    authorRoleNe: 'संस्थापक तथा मनोविद्',
+    date: 'March 18, 2026',
+    dateNe: 'चैत्र ५, २०८२',
+    readTime: '6 min read',
+    category: 'Mental Health',
+    categoryNe: 'मानसिक स्वास्थ्य',
+    featured: true,
+    tags: ['Destigmatization', 'Community Health', 'Nepal Awareness', 'Psychosocial Support'],
+    content: [
+      'In many communities across Nepal, emotional distress and psychiatric struggles remain shrouded in misconceptions. A family member grappling with severe anxiety or persistent grief is often labelled, isolated, or viewed through the lens of weakness. Yet, emotional distress is as tangible and deserving of care as physical injury.',
+      'At Paila Nepal Wellness Centre, we believe that community empathy is the foundation of recovery. When a neighborhood understands that changes in sleep, prolonged social withdrawal, and unexplained physical aches may be somatic signs of psychological pressure, healing begins.',
+      'Early psychosocial support does not mean institutionalization or heavy psychiatric medication. Often, the Look, Listen, and Link model—providing a non-judgmental presence, listening deeply without unsolicited advice, and gently connecting individuals to professional counselors—prevents acute distress from escalating into chronic crises.',
+      'By fostering open dialogues in schools, ward offices, and family dinner circles, we can normalize emotional vulnerabilities and build a culture where seeking counseling is viewed as an act of courageous self-respect.'
+    ],
+    contentNe: [
+      'नेपालका धेरै समुदायमा मानसिक तथा भावनात्मक समस्यालाई अझै पनि गलत दृष्टिकोणले हेर्ने चलन विद्यमान छ। चरम चिन्ता वा लामो समयसम्मको उदासी भोगिरहेका व्यक्तिलाई प्रायः कमजोरीको संज्ञा दिइन्छ। तर वास्तविकता के हो भने, भावनात्मक पीडा शारीरिक चोट जस्तै सत्य र उपचारयोग्य हुन्छ।',
+      'पाइला नेपाल वेलनेस सेन्टरमा हाम्रो दृढ विश्वास छ कि सामुदायिक सहानुभूति नै निको हुने पहिलो आधार हो। जब परिवार र समाजले निद्रा नलाग्नु, एक्लै बस्न रुचाउनु वा विनाकारण जिउ दुख्नु जस्ता लक्षणलाई मानसिक तनावको संकेतका रूपमा बुझ्छन्, तब मात्र वास्तविक सहयोग सुरु हुन्छ।',
+      'प्रारम्भिक मनोसामाजिक सहयोग भनेको अस्पताल भर्ना वा कडा औषधि सेवन मात्र होइन। हेर, सुन र जोड (Look, Listen, Link) विधि अनुसार निष्पक्ष भएर सुनिदिने र उपयुक्त परामर्शदातासँग समन्वय गराइदिने हो भने धेरै जटिल समस्याहरू समयमै समाधान हुन सक्छन्।',
+      'विद्यालय, वडा कार्यालय र पारिवारिक जमघटहरूमा मानसिक स्वास्थ्यबारे छलफल बढाएर हामी परामर्श सेवा लिनु कमजोरी होइन, आत्मसम्मानको प्रतीक हो भन्ने चेतना फैलाउन सक्छौं।'
+    ]
+  },
+  {
+    id: 'post-2',
+    slug: 'ctevt-psychosocial-counsellor-training-pathway',
+    title: 'The Making of a Psychosocial Counselor: Understanding the 780-Hour CTEVT Curriculum',
+    titleNe: 'मनोसामाजिक परामर्शदाताको यात्रा: ७८० घण्टे सीटीईभीटी पाठ्यक्रमको महसुस र महत्त्व',
+    summary: 'An in-depth look at what it takes to develop ethical listening, non-defensive communication, and structured clinical fieldwork in Nepal.',
+    summaryNe: 'नैतिक आचरण, सक्रिय सुनाइ सीप र फिल्ड अभ्यास सहित नेपालमा प्रमाणित मनोसामाजिक परामर्शदाता बन्ने प्रक्रियाको विस्तृत विवरण।',
+    author: 'Sharada Sunuwar',
+    authorRole: 'Founder & Senior Trainer',
+    authorRoleNe: 'संस्थापक तथा वरिष्ठ प्रशिक्षक',
+    date: 'March 10, 2026',
+    dateNe: 'फागुन २७, २०८२',
+    readTime: '8 min read',
+    category: 'Counselling Skills',
+    categoryNe: 'परामर्श सीप',
+    featured: true,
+    tags: ['CTEVT', 'Counselling Training', '780 Hours', 'Professional Ethics'],
+    content: [
+      'Psychosocial counselling is not merely offering well-intended advice or cheering someone up. It is a disciplined, reflective practice grounded in therapeutic ethics, active listening, and unconditional positive regard.',
+      'The 6-Month (780 Hours) Psychosocial Counselling curriculum aligned with the Council for Technical Education and Vocational Training (CTEVT) is meticulously structured across 16 core competencies. From micro-counselling skills and psychosocial assessment to crisis management and ethical boundaries, students transition from theoretical awareness to real-world applied competence.',
+      'A vital element of the course is the Supervised Field Practicum. Trainees undergo clinical case simulations, roleplays with audio-video feedback, and live supervised sessions under experienced mentors. They learn that maintaining strict confidentiality and recognizing the limits of their professional scope are paramount.',
+      'Graduates step into roles in community health centres, schools, emergency shelters, and non-governmental organisations, serving as vital bridges between community distress and formal healthcare systems.'
+    ],
+    contentNe: [
+      'मनोसामाजिक परामर्श भनेको कसैलाई अर्ति-उपदेश दिनु वा हौसला बढाउनु मात्र होइन। यो त नैतिक आचरण, सक्रिय सुनाइ र निष्पक्ष स्वीकार्यतामा आधारित एक अनुशासित व्यावसायिक विधा हो।',
+      'प्राविधिक शिक्षा तथा व्यावसायिक तालिम परिषद् (CTEVT) को मान्यता प्राप्त ६-महिने (७८० घण्टे) पाठ्यक्रम १६ वटा मुख्य दक्षताहरूमा विभाजित छ। यसमा आधारभूत परामर्श सीप, तनाव पहिचान, संकट व्यवस्थापन र व्यावसायिक मर्यादा समावेश छन्।',
+      'यस तालिमको मुटु भनेको सुपरिवेक्षण सहितको प्रयोगात्मक फिल्ड अभ्यास हो। प्रशिक्षार्थीहरूले प्रत्यक्ष केस अध्ययन, रोलप्ले र अनुभवी प्रशिक्षकहरूको सुपरिवेक्षणमा परामर्श अभ्यास गर्छन्। यस क्रममा उनीहरूले गोपनीयताको रक्षा र आफ्नो कार्यक्षेत्रको सीमालाई कडाइका साथ पालना गर्न सिक्छन्।',
+      'तालिम पूरा गरेका दक्ष परामर्शदाताहरू विद्यालय, स्वास्थ्य संस्था, स्थानीय सरकार र गैरसरकारी क्षेत्रमा काम गर्दै समुदायको मानसिक स्वास्थ्य सुदृढ गर्न महत्त्वपूर्ण योगदान दिइरहेका छन्।'
+    ]
+  },
+  {
+    id: 'post-3',
+    slug: 'psychological-first-aid-in-natural-disasters',
+    title: 'Look, Listen, Link: Psychological First Aid in Earthquake and Monsoon Emergencies',
+    titleNe: 'हेर, सुन, जोड: भूकम्प र बाढी-पहिरोको विपद्मा मनोवैज्ञानिक प्राथमिक उपचार (PFA)',
+    summary: 'How community first responders can safeguard survivors from acute trauma and foster natural coping mechanisms after disaster strikes.',
+    summaryNe: 'विपद्को क्षणमा उद्धारकर्मी र स्थानीय स्वयंसेवकहरूले पीडितहरूलाई कसरी मनोवैज्ञानिक प्राथमिक उपचार प्रदान गर्न सक्छन्?',
+    author: 'Sunil Lama',
+    authorRole: 'Founder & Psychologist',
+    authorRoleNe: 'संस्थापक तथा मनोविद्',
+    date: 'February 24, 2026',
+    dateNe: 'फागुन १२, २०८२',
+    readTime: '5 min read',
+    category: 'Disaster Preparedness',
+    categoryNe: 'विपद् पूर्वतयारी',
+    featured: false,
+    tags: ['PFA', 'Disaster Resilience', 'Trauma-Informed', 'Emergency Response'],
+    content: [
+      'In the immediate aftermath of an earthquake, landslide, or flash flood, panic and disorientation are overwhelming. While physical rescue, shelter, and warm meals are paramount, psychological first aid (PFA) is just as vital in preserving human dignity and long-term mental wellbeing.',
+      'PFA is not clinical debriefing; it does not force individuals to recount horrific memories or analyze trauma prematurely. Rather, it focuses on humane, supportive, and practical care.',
+      'The universal principles of Look (observing safety, identifying severe distress, noting urgent physical needs), Listen (approaching survivors calmly, respecting their pace, not interrupting), and Link (connecting with loved ones, basic aid, and shelter) form the backbone of field intervention.',
+      'Training local youth volunteers in PFA transforms communities from helpless victims into capable mutual-aid networks that bounce back faster after calamities.'
+    ],
+    contentNe: [
+      'भूकम्प, बाढी वा पहिरो गएको तत्काल पछि मानिसहरू चरम डर, अन्योल र मानसिक आघातमा हुन्छन्। यस्तो अवस्थामा उद्धार र राहतसँगै मनोवैज्ञानिक प्राथमिक उपचार (PFA) ले व्यक्तिको आत्मसम्मान र मानसिक सन्तुलन जोगाउन मद्दत गर्छ।',
+      'PFA भनेको जबरजस्ती घटना सम्झाउन लगाउनु वा मनोवैज्ञानिक विश्लेषण गर्नु होइन। यो त मायालु, व्यावहारिक र मानवीय सहयोग उपलब्ध गराउने सरल तर प्रभावकारी तरिका हो।',
+      'हेर (Look) - सुरक्षा र आवश्यकताको पहिचान, सुन (Listen) - धैर्यपूर्वक सुनिदिने र सान्त्वना दिने, जोड (Link) - परिवार, राहत र आवश्यक सेवाहरूसँग जोडिदिने। यी तीन नियमले विपद् प्रभावितहरूको पीडा कम गर्न जादुई भूमिका खेल्छन्।',
+      'स्थानीय युवाहरूलाई PFA तालिम दिएर हरेक गाउँ र टोलमा आपतकालीन मानसिक सहयोग दस्ता तयार पार्न सकिन्छ।'
+    ]
+  },
+  {
+    id: 'post-4',
+    slug: 'safe-schools-child-adolescent-mental-health',
+    title: 'Nurturing Resilient Classrooms: Child and Adolescent Psychosocial Wellbeing in Schools',
+    titleNe: 'उत्थानशील कक्षाकोठा: विद्यालयमा बालबालिका तथा किशोरकिशोरीको मनोसामाजिक स्वास्थ्य',
+    summary: 'Recognizing childhood emotional distress, managing exam pressure, and creating stigma-free learning environments for students in Nepal.',
+    summaryNe: 'विद्यालयमा बालबालिकाको भावनात्मक समस्या पहिचान गर्ने, परीक्षाको तनाव व्यवस्थापन र बालमैत्री वातावरण निर्माण गर्ने उपायहरू।',
+    author: 'Sharada Sunuwar',
+    authorRole: 'Founder & Senior Trainer',
+    authorRoleNe: 'संस्थापक तथा वरिष्ठ प्रशिक्षक',
+    date: 'February 12, 2026',
+    dateNe: 'माघ २९, २०८२',
+    readTime: '7 min read',
+    category: 'Safe Schools',
+    categoryNe: 'सुरक्षित विद्यालय',
+    featured: false,
+    tags: ['Safe Schools', 'Adolescent Health', 'Teacher Training', 'Emotional Resilience'],
+    content: [
+      'Children and adolescents spend a significant portion of their formative years in school. Yet, behavioral changes—such as abrupt drops in grades, sudden aggressiveness, persistent absenteeism, or excessive clinging—are frequently dismissed as indiscipline rather than cries for emotional support.',
+      'Academic pressure, peer bullying, family stress, and social media dynamics take a heavy toll on youth in urban and rural Nepal. Without an empathetic adult to turn to, children suffer in silence.',
+      'Through Paila Nepal\'s Safe School Initiative, we orient school teachers to become compassionate spotters of psychological distress. We equip educators with restorative communication, de-escalation techniques, and classroom peer-support circles.',
+      'When schools integrate mental wellness check-ins alongside math and science, academic performance naturally flourishes hand-in-hand with student happiness.'
+    ],
+    contentNe: [
+      'बालबालिका र किशोरकिशोरीहरू आफ्नो जीवनको महत्त्वपूर्ण समय विद्यालयमा बिताउँछन्। तर उनीहरूमा देखिने व्यवहारगत परिवर्तन जस्तै पढाइमा अचानक ह्रास, रिस, टोलाउने बानी वा विद्यालय जान नमान्ने अवस्थालाई प्रायः अनुशासनहीनता भनेर गाली गरिन्छ।',
+      'अत्यधिक परीक्षाको दबाब, साथीभाइको जिस्क्याइ (Bullying), पारिवारिक तनाव र सामाजिक सञ्जालको प्रभावले विद्यार्थीहरूलाई आन्तरिक रूपमा कमजोर बनाइरहेको हुन्छ।',
+      'पाइला नेपालको सुरक्षित विद्यालय कार्यक्रम अन्तर्गत हामी शिक्षक-शिक्षिकाहरूलाई बालबालिकाको भावनात्मक समस्या पहिचान गर्ने र कक्षाकोठामा सकारात्मक वातावरण बनाउने सीप प्रदान गर्दछौं।',
+      'जब विद्यालयमा पढाइसँगै विद्यार्थीको मानसिक स्वास्थ्यलाई पनि प्राथमिकता दिइन्छ, तब मात्र उनीहरूको समग्र बौद्धिक र व्यक्तिगत विकास सम्भव हुन्छ।'
+    ]
+  },
+  {
+    id: 'post-5',
+    slug: 'somatic-grounding-5-4-3-2-1-caregivers',
+    title: 'Somatic Grounding for Caregivers: The 5-4-3-2-1 Technique and Box Breathing in Action',
+    titleNe: 'हेरचाहकर्ताका लागि शारीरिक ग्राउन्डिङ: ५-४-३-२-१ विधि र बक्स ब्रीदिङको अभ्यास',
+    summary: 'Practical sensory anchoring tools for counselors, parents, and healthcare workers to regulate the nervous system during overwhelming moments.',
+    summaryNe: 'अत्यधिक तनाव र थकानका बेला स्नायु प्रणालीलाई शान्त पार्न परामर्शदाता, अभिभावक र स्वास्थ्यकर्मीले अपनाउने सरल अभ्यासहरू।',
+    author: 'Sunil Lama',
+    authorRole: 'Founder & Psychologist',
+    authorRoleNe: 'संस्थापक तथा मनोविद्',
+    date: 'January 28, 2026',
+    dateNe: 'माघ १४, २०८२',
+    readTime: '4 min read',
+    category: 'Counselling Skills',
+    categoryNe: 'परामर्श सीप',
+    featured: false,
+    tags: ['Grounding', 'Self Care', 'Mindfulness', 'Nervous System'],
+    content: [
+      'Caregivers, whether professional counselors, nurses, or parents supporting an ailing relative, often absorb the ambient stress of those they serve. Over time, secondary traumatic stress and compassion fatigue can cause tension headaches, irritable mood, and emotional numbness.',
+      'The body is the fastest route back to psychological regulation. Somatic grounding reconnects the mind to the present physical environment through sensory activation.',
+      'The 5-4-3-2-1 technique interrupts racing thoughts: identify 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste or feel gratitude for.',
+      'Coupled with 4-second box breathing (inhale 4, hold 4, exhale 4, hold 4), this simple routine lowers cortisol and restores clarity within minutes. You cannot pour from an empty cup—caring for yourself is prerequisite to serving others.'
+    ],
+    contentNe: [
+      'निरन्तर अरूको सेवामा खटिने परामर्शदाता, स्वास्थ्यकर्मी वा परिवारका सदस्यहरू प्रायः भावनात्मक थकान र तनावको शिकार हुन्छन्। अरूको पीडा सुन्दा-सुन्दा आफैं भित्र भारीपन महसुस हुनु सामान्य हो।',
+      'यस्तो बेला मस्तिष्कलाई शान्त बनाउने सबैभन्दा छिटो उपाय भनेको शरीर र इन्द्रियहरूलाई वर्तमान क्षणसँग जोड्नु (Grounding) हो।',
+      '५-४-३-२-१ विधिले मनको छटपटीलाई तत्काल रोक्छ: आँखाले देख्न सकिने ५ चिज, हातले छुन सकिने ४ चिज, कानले सुन्न सकिने ३ आवाज, नाकले सुँघ्न सकिने २ गन्ध र मुखमा अनुभव गर्न सकिने १ स्वादमा ध्यान केन्द्रित गर्नुहोस्।',
+      'यससँगै ४-४ सेकेन्डको बक्स ब्रीदिङ (सास लिने ४ सेकेन्ड, रोक्ने ४, फाल्ने ४ र फेरि रोक्ने ४) गर्नाले मुटुको धड्कन सामान्य हुन्छ र मानसिक ताजगी फर्किन्छ।'
+    ]
+  },
+  {
+    id: 'post-6',
+    slug: 'community-mutual-aid-and-disaster-resilience',
+    title: 'From Vulnerability to Resilience: How Community Circles Safeguard Local Neighborhoods',
+    titleNe: 'कमजोरीबाट उत्थानशीलता तर्फ: टोल र समुदाय कसरी विपद्-सक्षम बन्न सक्छन्?',
+    summary: 'The social fabric of Nepal—guthi, tole sudhar samiti, and women’s savings groups—as powerful engines of grassroots preparedness.',
+    summaryNe: 'गुठी, टोल सुधार समिति र आमा समूह जस्ता स्थानीय सामाजिक संरचनालाई विपद् पूर्वतयारी र मानसिक स्वास्थ्यसँग जोड्ने तरिका।',
+    author: 'Sunil Lama & Sharada Sunuwar',
+    authorRole: 'Co-Founders',
+    authorRoleNe: 'सह-संस्थापकद्वय',
+    date: 'January 15, 2026',
+    dateNe: 'माघ १, २०८२',
+    readTime: '6 min read',
+    category: 'Community Stories',
+    categoryNe: 'सामुदायिक कथा',
+    featured: false,
+    tags: ['Community Circles', 'Grassroots', 'Nepal Traditions', 'Disaster Resilience'],
+    content: [
+      'Disaster resilience in Nepal cannot solely depend on centralized international aid or delayed government machinery. The very first responders during any flood or landslide are always immediate neighbors and local youth.',
+      'Nepal possesses rich social capital in the form of traditional Guthi institutions, Tole Sudhar Samitis, youth clubs, and local women’s cooperatives. By embedding disaster go-bag preparation, basic search-and-rescue drills, and psychological first aid into these existing structures, communities achieve genuine self-reliance.',
+      'Preparedness is not merely owning an emergency backpack; it is knowing where your vulnerable elderly neighbors live, who has mobility impairments, and where the neighborhood assembly point is.',
+      'At Paila Nepal Wellness Centre, we support local ward leaders and community champions with actionable frameworks, transforming anxiety into organized readiness.'
+    ],
+    contentNe: [
+      'विपद्को घडीमा विदेशी सहायता वा सरकारी राहत पुग्न समय लाग्न सक्छ। त्यसैले कुनै पनि विपद्मा पहिलो उद्धारकर्ता सधैं छिमेकी र स्थानीय युवाहरू नै हुन्छन्।',
+      'हाम्रो समाजमा गुठी, टोल सुधार समिति, आमा समूह र युवा क्लबहरू जस्ता बलिया सामाजिक संरचनाहरू छन्। यदि यी संरचनाहरूलाई आपतकालीन झोला (Go-Bag) तयारी र मनोवैज्ञानिक प्राथमिक उपचारसँग जोड्न सकियो भने हरेक टोल आफैंमा सक्षम बन्न सक्छ।',
+      'तयारी भनेको झोलामा सामान राख्नु मात्र होइन; टोलका वृद्धवृद्धा कहाँ बस्छन्, कसलाई विशेष सहयोग चाहिन्छ र सुरक्षित खुला ठाउँ कहाँ छ भन्ने कुराको पूर्व जानकारी हुनु पनि हो।',
+      'पाइला नेपालले स्थानीय समुदाय र टोल अगुवाहरूसँग मिलेर यस्तै व्यावहारिक तालिम र कार्यशालाहरू निरन्तर सञ्चालन गर्दै आइरहेको छ।'
+    ]
+  }
+];
+
+export const initialNewsletterSubscribers: NewsletterSubscriber[] = [
+  {
+    id: 'sub-1',
+    email: 'counsellor.nepal@example.org',
+    name: 'Avishek Sharma',
+    interests: ['Mental Health Guides', 'Training Cohorts', 'Disaster Resilience'],
+    subscribedAt: '2026-03-01T10:14:00Z'
+  },
+  {
+    id: 'sub-2',
+    email: 'socialwork.ktm@example.org',
+    name: 'Pratima Shrestha',
+    interests: ['Community Workshops', 'Safe Schools'],
+    subscribedAt: '2026-03-12T14:32:00Z'
   }
 ];

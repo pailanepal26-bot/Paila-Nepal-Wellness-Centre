@@ -173,7 +173,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                       </div>
                       <div>
                         <p className="text-xs font-bold text-slate-800">6-Month Training</p>
-                        <p className="text-[11px] text-slate-500">780 Hours · 160 OJT</p>
+                        <p className="text-[11px] text-slate-500">780 Hours · Practical Fieldwork</p>
                       </div>
                     </div>
                     <span className="text-[10px] text-blue-600 font-semibold">Enrolling</span>
@@ -405,12 +405,12 @@ export const HomePage: React.FC<HomePageProps> = ({
               <span className="font-extrabold text-[#008C4A] text-base sm:text-lg">780 Hours</span>
             </div>
             <div className="p-4 bg-white rounded-xl border border-slate-200/80 text-center">
-              <span className="text-xs text-slate-500 block">Supervised Practice</span>
-              <span className="font-extrabold text-amber-600 text-base sm:text-lg">160 Hours OJT</span>
+              <span className="text-xs text-slate-500 block">Practical Practice</span>
+              <span className="font-extrabold text-amber-600 text-base sm:text-lg">Field Practicum</span>
             </div>
             <div className="p-4 bg-white rounded-xl border border-slate-200/80 text-center">
               <span className="text-xs text-slate-500 block">Learning Framework</span>
-              <span className="font-extrabold text-slate-700 text-xs sm:text-sm">Theory + Prac + OJT</span>
+              <span className="font-extrabold text-slate-700 text-xs sm:text-sm">Theory + Practical</span>
             </div>
           </div>
         </div>

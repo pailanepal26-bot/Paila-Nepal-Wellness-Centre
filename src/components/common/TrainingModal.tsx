@@ -103,11 +103,11 @@ export const TrainingModal: React.FC<TrainingModalProps> = ({ isOpen, onClose, o
               </div>
               <div className="p-3 bg-amber-50 rounded-xl text-center">
                 <span className="text-[11px] text-slate-500 block">Field Practice</span>
-                <span className="font-bold text-amber-700 text-sm sm:text-base">160 Hrs OJT</span>
+                <span className="font-bold text-amber-700 text-sm sm:text-base">Field Practicum</span>
               </div>
               <div className="p-3 bg-indigo-50 rounded-xl text-center">
                 <span className="text-[11px] text-slate-500 block">Learning Model</span>
-                <span className="font-bold text-indigo-700 text-xs sm:text-xs">Theory+Prac+OJT</span>
+                <span className="font-bold text-indigo-700 text-xs sm:text-xs">Theory + Practical</span>
               </div>
             </div>
 

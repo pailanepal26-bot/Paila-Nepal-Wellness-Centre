@@ -1,4 +1,4 @@
-export type Language = 'en' | 'ne';
+export type Language = 'en' | 'ne' | 'zh' | 'ja' | 'ru' | 'de' | 'fr';
 
 export interface LeadershipMember {
   id: string;

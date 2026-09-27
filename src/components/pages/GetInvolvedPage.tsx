@@ -430,7 +430,7 @@ export const GetInvolvedPage: React.FC<GetInvolvedPageProps> = ({ onOpenTraining
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-slate-600 max-w-md mx-auto space-y-1 text-left">
               <p className="font-bold text-slate-800">Featured Course:</p>
               <p className="font-semibold text-[#1457A6]">6-Month Psychosocial Counselling Training</p>
-              <p className="text-[11px] text-slate-500">780 Hours total · 160 Hours OJT · CTEVT Curriculum based</p>
+              <p className="text-[11px] text-slate-500">780 Hours total · Supervised Fieldwork · CTEVT Curriculum based</p>
             </div>
 
             <div className="pt-2">
