@@ -4,6 +4,21 @@ import path from 'path';
 import fs from 'fs';
 import {defineConfig} from 'vite';
 
+function copyDir(src: string, dest: string) {
+  if (!fs.existsSync(src)) return;
+  fs.mkdirSync(dest, { recursive: true });
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
 export default defineConfig(() => {
   return {
     base: './',
@@ -11,14 +26,26 @@ export default defineConfig(() => {
       react(),
       tailwindcss(),
       {
-        name: 'copy-404-for-github-pages',
+        name: 'github-pages-bundler',
         closeBundle() {
           try {
-            const distIndex = path.resolve(__dirname, 'dist/index.html');
-            const dist404 = path.resolve(__dirname, 'dist/404.html');
+            const distDir = path.resolve(__dirname, 'dist');
+            const distIndex = path.resolve(distDir, 'index.html');
+            const dist404 = path.resolve(distDir, '404.html');
+            const distNoJekyll = path.resolve(distDir, '.nojekyll');
+
+            // 1. Write .nojekyll in dist so GitHub Pages doesn't ignore assets
+            fs.writeFileSync(distNoJekyll, '');
+
+            // 2. Write 404.html in dist so page reloads don't return 404
             if (fs.existsSync(distIndex)) {
               fs.copyFileSync(distIndex, dist404);
             }
+
+            // 3. Mirror complete build to docs/ directory for users who choose
+            // GitHub Pages source: "Deploy from a branch" -> "main" -> "/docs"
+            const docsDir = path.resolve(__dirname, 'docs');
+            copyDir(distDir, docsDir);
           } catch (e) {
             // ignore if not building
           }
